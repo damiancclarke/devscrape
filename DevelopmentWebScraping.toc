@@ -1,0 +1,7 @@
+\select@language {english}
+\beamer@endinputifotherversion {3.10pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Python}{2}{0}{1}
+\beamer@sectionintoc {2}{Web Scraping}{5}{0}{2}
+\beamer@sectionintoc {3}{Coding}{9}{0}{3}
+\beamer@sectionintoc {4}{Where to From Here}{14}{0}{4}

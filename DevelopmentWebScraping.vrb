@@ -1,0 +1,28 @@
+\frametitle {Exporting Our `Data'}
+Python is extremely capable at editing text to create output files:
+\vspace{5mm}
+
+ \begin{minted}[mathescape,
+               linenos,
+               numbersep=8pt,
+               frame=lines,
+               framesep=3mm,
+               fontsize=\scriptsize,
+               fontfamily=tt]{python}
+#*******************************************************************************
+# (3) Loop through all comics, finding each comic's title or capturing errors
+#*******************************************************************************
+output = open('xkcd_names.txt', 'w')
+output.write('Comic, Number, Title \n')
+
+for append in range(1, num+1):
+    url = target + '/' + str(append)
+    response = urllib2.urlopen(url)
+    for line in response:
+        search = re.search('ctitle',line)
+        if search!=None:
+            print line[17:-7]
+            output.write('xkcd,' + str(append) + ',' + line[17:-7] + '\n')
+
+output.close()
+\end{minted}
